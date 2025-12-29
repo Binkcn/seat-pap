@@ -1,0 +1,31 @@
+{
+    "name": "binkcn/seat-pap",
+    "description": "A SeAT module for EVE Online PAP management, featuring fleet records and user rankings.",
+    "type": "seat-plugin",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Bink Wang",
+            "email": "binkcn@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Binkcn\\Seat\\SeatPap\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Binkcn\\Seat\\SeatPap\\PapServiceProvider"
+            ]
+        }
+     },	     
+    "require": {
+        "eveseat/services": "^5.0.1",
+        "eveseat/eveapi": "^5.0",
+        "eveseat/web": "^5.0"
+    }
+}
