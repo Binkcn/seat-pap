@@ -18,7 +18,7 @@ class CreateSrpTables extends Migration
             $table->string('fleet_name')->nullable();
             $table->bigInteger('fc_character_id')->default(0);
             $table->string('fc_character_name')->nullable();
-            $table->string('fleet_motd')->nullable();
+            $table->text('fleet_motd')->nullable();
             $table->boolean('fleet_available')->default(false);
 
             $table->timestamps();
