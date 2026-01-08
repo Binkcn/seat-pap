@@ -28,6 +28,8 @@ return [
     'sync_fleet_esi' => 'Sync Fleet (ESI)',
     'issuePoints' => 'Issue Points',
     'points_issued' => 'Points Issued Successfully',
+    'not_fleet_available' => 'Fleet is currently closed',
+    'not_fleet_boss' => 'Not the current fleet commander',
 
     'fleets' => 'Fleets',
     'fleetId'  => 'Fleet ID',

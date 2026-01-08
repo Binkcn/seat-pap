@@ -175,6 +175,15 @@ class PapAdminController extends Controller
 
     public function papIssuePoints($fleet_id)
     {
+        $fleet = Fleets::where('fleet_id', $fleet_id)->first();
+        if ($fleet->fleet_available !== 1)
+            return redirect()->back()
+                ->with('error', trans('pap::pap.not_fleet_available'));
+
+        if ($fleet->fleet_boss_id !== auth()->user()->main_character_id)
+            return redirect()->back()
+                ->with('error', trans('pap::pap.not_fleet_boss'));
+
         $refresh_token = RefreshToken::where('character_id', auth()->user()->main_character_id)->first();
 
         $eseyeClient = new EseyeClient();

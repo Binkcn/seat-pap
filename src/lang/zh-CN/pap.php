@@ -28,6 +28,8 @@ return [
     'sync_fleet_esi' => '同步舰队信息(ESI)',
     'issuePoints' => '发放积分',
     'points_issued' => '积分发放成功',
+    'not_fleet_available' => '舰队已关闭',
+    'not_fleet_boss' => '不是当前舰队指挥官',
 
     'fleets' => '舰队列表',
     'fleetId'  => '舰队ID',

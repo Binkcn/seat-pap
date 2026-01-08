@@ -48,14 +48,10 @@
                     @endif
                 </td>
                 <td>
-                    @if ($fleet->fleet_available === 1 && $fleet->fc_character_id === auth()->user()->main_character_id)
                     <button class="btn btn-xs btn-link" data-toggle="modal" data-target="#issue-points-edit" data-fleet-id="{{ $fleet->fleet_id }}">
                         <i class="fas fa-trophy"></i>
                         {{ trans('pap::pap.issuePoints') }}
                     </button>
-                    @else
-                    <span class="text-muted">No actions available</span>
-                    @endif
                 </td>
                 </tr>
                 @endforeach
