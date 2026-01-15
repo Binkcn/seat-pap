@@ -180,7 +180,7 @@ class PapAdminController extends Controller
             return redirect()->back()
                 ->with('error', trans('pap::pap.not_fleet_available'));
 
-        if ($fleet->fleet_boss_id !== auth()->user()->main_character_id)
+        if ($fleet->fc_character_id !== auth()->user()->main_character_id)
             return redirect()->back()
                 ->with('error', trans('pap::pap.not_fleet_boss'));
 
